@@ -99,3 +99,9 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# emojis
+emojione*.zip
+emojione*/
+
+.DS_Store
