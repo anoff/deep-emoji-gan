@@ -105,3 +105,4 @@ emojione*.zip
 emojione*/
 
 .DS_Store
+checkpoints/
