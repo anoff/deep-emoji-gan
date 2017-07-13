@@ -7,9 +7,9 @@ CURRENT_DIR=$(notdir $(patsubst %/,%,$(dir $(mkfile_path))))
 
 # sync code
 syncup:
-	rsync -e "ssh -i ~/.ssh/deeplearning" -avz --exclude=".git/" . udacity@$(EC2_URL):~/jupyter/$(CURRENT_DIR)
+	rsync -e "ssh -i ~/.ssh/deeplearning" -avz --exclude-from=".gitignore" . udacity@$(EC2_URL):~/jupyter/$(CURRENT_DIR)
 syncdown:
-	rsync -e "ssh -i ~/.ssh/deeplearning" -avz --exclude=".git/" udacity@$(EC2_URL):~/jupyter/$(CURRENT_DIR)/ .
+	rsync -e "ssh -i ~/.ssh/deeplearning" -avz --exclude-from=".gitignore" udacity@$(EC2_URL):~/jupyter/$(CURRENT_DIR)/ .
 # start/stop instance
 ec2stop:
 	aws --region $(EC2_REGION) ec2 stop-instances --instance-ids $(EC2_INSTANCEID)
