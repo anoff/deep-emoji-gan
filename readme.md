@@ -114,3 +114,39 @@ keeping track of different network designs and hyperparameters
 
 ![](./results/e8285ca_sample.png)
 
+
+### [151284d](https://github.com/anoff/deep-emoji-gan/blob/151284d577425c1537ea8dc4a0013aaa02ffe847/Smiley_Generator.ipynb)
+
+#### generator design
+
+*convolutions:* `3`
+
+*features:* `64 > 32 > 16`
+
+*kernel size:* `4 > 6 > 8`
+
+#### discriminator design
+
+*convolutions:* `3`
+
+*features:* `8 > 16 > 32`
+
+*kernel size:* `8 > 6 > 4`
+
+#### hyper params
+
+*training set:* `714` (people & activity)
+
+*epochs:* `4096` (only `1200` run?)
+
+*learning rate:* `0.0003`
+
+*batch size:* `256`
+
+*opt.beta:* `0.5`
+
+#### result
+
+![](./results/151284d_loss.png)
+
+![](./results/151284d_sample.png)
