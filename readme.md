@@ -2,6 +2,17 @@
 
 > (trying to) generate new emojis with DCGAN 🤗🏭
 
+## usage
+
+The emojis are taken from a git submodule to initialize it after cloning this repo run:
+
+```sh
+git submodule init
+git submodule update
+```
+
+The code itself is currently hosted in a jupyter notebook so you may run `jupyter notebook` to access the latest version of the GAN and run all the cells to learn the network.
+
 ## development
 
 keeping track of different network designs and hyperparameters
