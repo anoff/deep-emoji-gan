@@ -276,3 +276,35 @@ keeping track of different network designs and hyperparameters
 _Best_ sample
 
 ![](./results/0344c27_best.png)
+
+### Tuning Hyperparameters
+
+*training set:* `1565` (multi-set, people)
+
+#### generator design
+
+*convolutions:* `4`
+
+*features:* `256 > 128 > 32 > 4`
+
+*kernel size:* `5`
+
+#### discriminator design
+
+*convolutions:* `3`
+
+*features:* `32 > 128 > 256`
+
+*kernel size:* `5`
+
+| learnrate | epochs | opt.beta1 | opt.beta2 | alpha | batchsize | result |
+|-----------|--------|-----------|-----------|-------|-----------|--------|
+| 0.0001    | 256    | 0.5       | 0.7       | 0.2   | 256       | disc ↘️ `~0.3`, gen ↗️`~2` |
+| 0.0001    | 128    | 0.4       | 0.7       | 0.2   | 128       | ![](./results/meta2_loss.png) |
+| 0.0001    | 128    | 0.4       | 0.7       | 0.2   | 512       | ![](./results/meta3_loss.png) |
+| 0.0001    | 128    | 0.4       | 0.4       | 0.2   | 512       | ![](./results/meta4_loss.png) |
+| 0.0001    | 128    | 0.8       | 0.5       | 0.2   | 512       | ![](./results/meta5_loss.png) |
+| 0.0001    | 128    | 0.9       | 0.999     | 0.2   | 512       | ![](./results/meta6_loss.png) |
+| 0.0001    | 128    | 0.4       | 0.999     | 0.2   | 512       | ![](./results/meta7_loss.png) |
+| 0.0001    | 256    | 0.4       | 0.999     | 0.2   | 512       | ![](./results/meta8_loss.png) |
+| 0.00001    | 128    | 0.4       | 0.999     | 0.2   | 512       | ![](./results/meta9_loss.png) |
