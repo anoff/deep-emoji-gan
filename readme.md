@@ -344,3 +344,39 @@ _Best_ sample
 ![](./results/6dfe858_loss.png)
 
 ![](./results/6dfe858_sample.png)
+
+### [63abc3b](https://github.com/anoff/deep-emoji-gan/blob/63abc3b9163e550c0d1a5f3dcbb3b7a8b9458e64/Smiley_Generator.ipynb)
+
+#### generator design
+
+*convolutions:* `2`
+
+*features:* `1024 > 256 > 4`
+
+*kernel size:* `5`
+
+#### discriminator design
+
+*convolutions:* `2`
+
+*features:* `64 > 256`
+
+*kernel size:* `5`
+
+#### hyper params
+
+*training set:* `1` (one round shocked face)
+
+*epochs:* `5000`
+
+*learning rate:* `learning_rate_d=0.0003`, `learning_rate_g=0.001`
+
+*batch size:* `32`
+
+*opt.beta:* `0.5`
+
+#### result
+
+![](./results/63abc3b_loss.png)
+
+![](./results/63abc3b_sample.png)
