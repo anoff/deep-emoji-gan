@@ -380,3 +380,39 @@ _Best_ sample
 ![](./results/63abc3b_loss.png)
 
 ![](./results/63abc3b_sample.png)
+
+### [8c948e8](https://github.com/anoff/deep-emoji-gan/blob/8c948e8682fefc77aa80601af571499ac4898440/Smiley_Generator.ipynb)
+
+#### generator design
+
+*convolutions:* `3`
+
+*features:* `512 > 128 > 64`
+
+*kernel size:* `5`
+
+#### discriminator design
+
+*convolutions:* `3`
+
+*features:* `64 > 128 > 512`
+
+*kernel size:* `5`
+
+#### hyper params
+
+*training set:* `1` (one round shocked face)
+
+*epochs:* `200`
+
+*learning rate:* `learning_rate_d=0.0002`, `learning_rate_g=0.0002`
+
+*batch size:* `768`
+
+*opt.beta:* `0.5`
+
+#### result
+
+_`Note:` The goal of this run was to proof that a DCGAN is able to train on a single image and will end up replicating this image. This was a way of testing the overall chain and exposed a bug in the data preparation methods._
+
+![](./results/8c948e8_sample.png)
