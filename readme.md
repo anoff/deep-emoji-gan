@@ -416,3 +416,61 @@ _Best_ sample
 _`Note:` The goal of this run was to proof that a DCGAN is able to train on a single image and will end up replicating this image. This was a way of testing the overall chain and exposed a bug in the data preparation methods._
 
 ![](./results/8c948e8_sample.png)
+
+### [86359f9](https://github.com/anoff/deep-emoji-gan/blob/86359f99f01633b4535a84a897a6d4ed2c6a5a0a/Smiley_Generator.ipynb)
+
+#### generator design
+
+*convolutions:* `3`
+
+*features:* `512 > 128 > 64`
+
+*kernel size:* `5`
+
+#### discriminator design
+
+*convolutions:* `3`
+
+*features:* `64 > 128 > 512`
+
+*kernel size:* `5`
+
+#### hyper params
+
+*training set:* `273` (1565 filtered for being yellow)
+
+*epochs:* `800`
+
+*learning rate:* `learning_rate_d=0.0003`, `learning_rate_g=0.0003`
+
+*batch size:* `768`
+
+*opt.beta:* `0.5`
+
+#### result
+
+![](./results/86359f9_sample.png)
+
+![](./results/86359f9_loss.png)
+
+#### Degredation of diversity
+
+What's interesting is that the network managed to somehow learn diverse features and put them together and at epoch ~600 got scrambled and forgot some of the features like a _sticked out tongue_.
+
+The network was trained with several emojis of this type:
+![](./results/86359f9_in.png)
+
+Emoji shape forming at epoch50
+![](./results/86359f9_50.png)
+
+First details emerging at e150
+![](./results/86359f9_150.png)
+
+Diversity in the generated images at e600
+![](./results/86359f9_600.png)
+
+Something creating a lot of noise at e650
+![](./results/86359f9_650.png)
+
+Final result at e800 with less features than e600
+![](./results/86359f9_800.png)
