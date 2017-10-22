@@ -480,3 +480,55 @@ Something creating a lot of noise at e650
 Final result at e800 with less features than e600
 
 ![](./results/86359f9_800.png)
+
+### [7e1480d](https://github.com/anoff/deep-emoji-gan/blob/7e1480d559d4320d1d354eb0aa0d6ed003ac4012/Smiley_Generator.ipynb)
+
+#### generator design
+
+*convolutions:* `3`
+
+*features:* `256 > 128 > 64`
+
+*kernel size:* `5`
+
+#### discriminator design
+
+*convolutions:* `3`
+
+*features:* `64 > 128 > 256`
+
+*kernel size:* `5`
+
+#### hyper params
+
+*training set:* `141` (only "face")
+
+*epochs:* `800`
+
+*learning rate:* `learning_rate_d=0.0001`, `learning_rate_g=0.0001`
+
+*batch size:* `768`
+
+*opt.beta:* `0.5`
+
+#### result
+
+Evolution over epochs
+
+![](./results/7e1480d_epoch.png)
+
+Losses
+
+![](./results/7e1480d_loss.png)
+
+Epoch200
+
+![](./results/7e1480d_200.png)
+
+Epoch 450
+
+![](./results/7e1480d_450.png)
+
+Final sample
+
+![](./results/7e1480d_sample.png)
