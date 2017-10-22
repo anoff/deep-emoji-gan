@@ -453,7 +453,7 @@ _`Note:` The goal of this run was to proof that a DCGAN is able to train on a si
 
 ![](./results/86359f9_loss.png)
 
-#### Degredation of diversity
+#### Degradation of diversity
 
 What's interesting is that the network managed to somehow learn diverse features and put them together and at epoch ~600 got scrambled and forgot some of the features like a _sticked out tongue_.
 
