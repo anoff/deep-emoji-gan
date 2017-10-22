@@ -458,19 +458,25 @@ _`Note:` The goal of this run was to proof that a DCGAN is able to train on a si
 What's interesting is that the network managed to somehow learn diverse features and put them together and at epoch ~600 got scrambled and forgot some of the features like a _sticked out tongue_.
 
 The network was trained with several emojis of this type:
+
 ![](./results/86359f9_in.png)
 
 Emoji shape forming at epoch50
+
 ![](./results/86359f9_50.png)
 
 First details emerging at e150
+
 ![](./results/86359f9_150.png)
 
 Diversity in the generated images at e600
+
 ![](./results/86359f9_600.png)
 
 Something creating a lot of noise at e650
+
 ![](./results/86359f9_650.png)
 
 Final result at e800 with less features than e600
+
 ![](./results/86359f9_800.png)
